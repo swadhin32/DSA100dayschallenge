@@ -37,7 +37,9 @@ Key Idea:
 Sort by end → shoot arrow at earliest end
 */
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
