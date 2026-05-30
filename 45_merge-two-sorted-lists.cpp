@@ -44,7 +44,7 @@ public:
 
         ListNode* tail = &dummy;
 
-        while(list1 != NULL && list2 != NULL)
+        while(list1 != nullptr && list2 != nullptr)
         {
             if(list1->val <= list2->val)
             {
@@ -62,12 +62,12 @@ public:
             tail = tail->next;
         }
 
-        if(list1 != NULL)
+        if(list1 != nullptr)
         {
             tail->next = list1;
         }
 
-        if(list2 != NULL)
+        if(list2 != nullptr)
         {
             tail->next = list2;
         }

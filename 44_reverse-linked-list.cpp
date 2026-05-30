@@ -58,10 +58,10 @@ class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
 
-        ListNode* prev = NULL;
+        ListNode* prev = nullptr;
         ListNode* curr = head;
 
-        while(curr != NULL)
+        while(curr != nullptr)
         {
             ListNode* nextNode = curr->next;
 

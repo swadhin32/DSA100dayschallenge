@@ -42,9 +42,9 @@ public:
 
     ListNode* reverse(ListNode* head)
     {
-        ListNode* prev = NULL;
+        ListNode* prev = nullptr;
 
-        while(head != NULL)
+        while(head != nullptr)
         {
             ListNode* nextNode = head->next;
 
@@ -63,7 +63,7 @@ public:
         ListNode* slow = head;
         ListNode* fast = head;
 
-        while(fast != NULL && fast->next != NULL)
+        while(fast != nullptr && fast->next != nullptr)
         {
             slow = slow->next;
 
@@ -74,7 +74,7 @@ public:
 
         ListNode* firstHalf = head;
 
-        while(secondHalf != NULL)
+        while(secondHalf != nullptr)
         {
             if(firstHalf->val != secondHalf->val)
             {

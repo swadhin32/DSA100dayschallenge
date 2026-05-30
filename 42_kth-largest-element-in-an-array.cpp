@@ -47,6 +47,12 @@ That top element becomes the kth largest element.
 
 
 
+#include <vector>
+#include <queue>
+#include <functional>
+
+using namespace std;
+
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
