@@ -51,3 +51,44 @@
 // 👉 “Transform the tree”
 
 // Invert Binary Tree is the first classic transformation problem ⚔️
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution {
+public:
+
+    TreeNode* invertTree(TreeNode* root) 
+    {
+        if(root == NULL)
+            return NULL;
+
+        swap(root->left, root->right);
+
+        invertTree(root->left);
+
+        invertTree(root->right);
+
+        return root;
+    }
+};

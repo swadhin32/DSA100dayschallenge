@@ -26,3 +26,60 @@
 // ✅ Foundation for BST problems
 
 // ━━━━━━━━━━━━━━━━━━
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <vector>
+#include <cstddef>
+
+using namespace std;
+
+// Definition for a binary tree node.
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+
+class Solution {
+public:
+
+    void inorder(TreeNode* root, vector<int>& ans) {
+
+        if(root == NULL)
+            return;
+
+        // LEFT
+        inorder(root->left, ans);
+
+        // ROOT
+        ans.push_back(root->val);
+
+        // RIGHT
+        inorder(root->right, ans);
+    }
+
+    vector<int> inorderTraversal(TreeNode* root) {
+
+        vector<int> ans;
+
+        inorder(root, ans);
+
+        return ans;
+    }
+};

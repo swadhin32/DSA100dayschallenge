@@ -31,3 +31,35 @@
 // ✅ HashMap for visited/cloned nodes
 // ✅ Handling cycles in graph
 // ━━━━━━━━━━━━━━━━━━
+
+
+
+
+
+class Solution {
+public:
+    unordered_map<Node*, Node*> mp;
+
+    Node* cloneGraph(Node* node) {
+
+        if(node == NULL)
+            return NULL;
+
+        // already cloned
+        if(mp.find(node) != mp.end())
+            return mp[node];
+
+        // create clone
+        Node* clone = new Node(node->val);
+
+        // store mapping
+        mp[node] = clone;
+
+        // clone neighbors
+        for(auto neighbor : node->neighbors) {
+            clone->neighbors.push_back(cloneGraph(neighbor));
+        }
+
+        return clone;
+    }
+};
